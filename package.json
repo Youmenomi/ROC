@@ -1,0 +1,42 @@
+{
+  "name": "roc",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version",
+    "test": "pnpm -r --filter='./packages/*' run test",
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "release": "pnpm build && changeset publish",
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "homepage": "https://github.com/Youmenomi/ROC/#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "@vitest/coverage-c8": "^0.28.5",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vitest": "^0.28.5"
+  },
+  "engines": {
+    "node": ">=18.13.0",
+    "pnpm": ">=7.27.0",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
+  "packageManager": "pnpm@7.27.0"
+}
