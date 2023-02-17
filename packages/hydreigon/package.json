@@ -1,0 +1,46 @@
+{
+  "name": "hydreigon",
+  "version": "0.2.5",
+  "description": "Are you looking for a Hydreigon to classify data for you? Come and catch it!",
+  "keywords": [
+    "typescript",
+    "classify",
+    "items",
+    "indexer",
+    "data",
+    "structure",
+    "management",
+    "sortable",
+    "pokemon",
+    "hydreigon"
+  ],
+  "main": "./dist/hydreigon.js",
+  "module": "./dist/hydreigon.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "import": "./dist/hydreigon.mjs",
+    "require": "./dist/hydreigon.js"
+  },
+  "scripts": {
+    "test": "tsc --noEmit -p tsconfig.test.json && vitest run --coverage",
+    "ts:check": "tsc --noEmit -p tsconfig.json",
+    "build:js": "vite build",
+    "build:types": "tsc --emitDeclarationOnly -p tsconfig.json",
+    "build:clean": "rimraf dist",
+    "build": "npm run ts:check && eslint --ext .ts,.js ./src && npm run build:clean && npm run build:js && npm run build:types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youmenomi/packages/hydreigon/hydreigon.git"
+  },
+  "author": "Dean Yao <youmenomi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Youmenomi/packages/hydreigon/hydreigon/issues"
+  },
+  "homepage": "https://github.com/Youmenomi/packages/hydreigon/hydreigon#readme"
+}
